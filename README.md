@@ -2,6 +2,8 @@
 
 A week of Istio goodness (with focus for the exam).
 
+![Mesh week](./images/meshweek.png)
+
 CNCF announced a new certification called Istio Certified Associate (ICA). Join [Peter Jausovec](https://twitter.com/pjausovec), [Marino Wijay](https://twitter.com/virtualized6ix), and [Alessandro Vozza](https://twitter.com/bongo), three Istio, Cilium, Kubernetes, and overall cloud-native experts, for a series of live streams called Mesh Week.
 
 Each live stream will be about 1 hour and will focus on a different topic from the [Istio Certified associate exam curriculum](https://training.linuxfoundation.org/certification/istio-certified-associate-ica/). We’ll explain the concepts, talk about them, and see them in practice with hands-on demos. There will also be plenty of opportunities to ask questions.
