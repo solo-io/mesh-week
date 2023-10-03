@@ -1,0 +1,28 @@
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  name: currency-api
+spec:
+  hosts:
+  - www.ecb.europa.eu
+  ports:
+  - number: 80
+    name: http
+    protocol: HTTP
+  - number: 443
+    name: https
+    protocol: HTTPS
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: currency-timeout
+spec:
+  hosts:
+    - www.ecb.europa.eu
+  http:
+  - timeout: 3s
+    route:
+      - destination:
+          host: www.ecb.europa.eu
+        weight: 100
