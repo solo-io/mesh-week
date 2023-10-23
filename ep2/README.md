@@ -11,9 +11,12 @@ Create the cluster:
 kind create cluster --name istio --image kindest/node:v1.28.0
 ```
 
-Install Istio:
+Install Istio w/ Grafana and Prometheus:
 
 ```bash
 istioctl install --set profile=demo -y
 kubectl kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v0.8.0" | kubectl apply -f -;
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.19/samples/addons/prometheus.yaml
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.19/samples/addons/grafana.yaml
 ```
+
